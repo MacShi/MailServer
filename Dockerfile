@@ -8,7 +8,7 @@ RUN chmod 777 /root/start.sh
 
 # 创建邮箱用户并设置密码
 RUN useradd test -s /sbin/nologin
-RUN echo -e "Abc@321.\nAbc@321."|passwd test
+RUN echo -e "Mail@server1.\nMail@server1."|passwd test
 
 COPY ./conf/main.cf /etc/postfix/main.cf
 COPY ./conf/dovecot.conf /etc/dovecot/dovecot.conf
